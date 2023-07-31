@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import BucketForm from './BucketForm';
-import Bucket from './Bucket';
+// import BucketForm from './BucketForm';
+// import Bucket from './Bucket';
 
 function BucketList() {
+  /*
   const [bucket, setBucket] = useState([]);
 
   // Function to add a bucket list item
@@ -45,17 +46,17 @@ function BucketList() {
       prev.map((item) => (item.id === itemId ? newValue : item))
     );
   };
-
+*/
   return (
     <div>
       <h1>What is on your bucket list?</h1>
-      <BucketForm onSubmit={addBucketItem} />
+      {/* <BucketForm onSubmit={addBucketItem} />
       <Bucket
         bucket={bucket}
         completeBucketItem={completeBucketItem}
         removeBucketItem={removeBucketItem}
         editBucketItem={editBucketItem}
-      ></Bucket>
+  ></Bucket> */}
     </div>
   );
 }

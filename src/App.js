@@ -1,11 +1,11 @@
 import './App.css';
-// import BucketList from './components/BucketList';
+import BucketList from './components/BucketList';
 
 function App() {
   return (
     <div className="bucket-app">
       <h1>Hello World</h1>
-      {/* <BucketList /> */}
+      <BucketList />
     </div>
   );
 }
