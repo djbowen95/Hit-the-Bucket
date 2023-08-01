@@ -5,14 +5,14 @@ import BucketForm from './BucketForm';
 function BucketList() {
 
   const [bucket, setBucket] = useState(["Hello", "World"]);
-  /*
+ 
   // Function to add a bucket list item
   const addBucketItem = (item) => {
-
+    alert("Button has been clicked");
     // TODO: Write logic to add the new bucket item to the bucket state variable
     
   };
-
+ /*
   // Function to mark bucket list item as complete
   const completeBucketItem = (id) => {
     // If the ID passed to this function matches the ID of the item that was clicked, mark it as complete
@@ -51,6 +51,7 @@ function BucketList() {
     <div>
       <h1>What is on your bucket list?</h1>
       <h1>Bucket: {bucket}</h1>
+      <button onClick={addBucketItem}>Hello</button>
       <BucketForm />
       {/* <BucketForm onSubmit={addBucketItem} /> 
       { /* <Bucket
