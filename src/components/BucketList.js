@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-// import BucketForm from './BucketForm';
+import BucketForm from './BucketForm';
 // import Bucket from './Bucket';
 
 function BucketList() {
-  /*
-  const [bucket, setBucket] = useState([]);
 
+  const [bucket, setBucket] = useState(["Hello", "World"]);
+  /*
   // Function to add a bucket list item
   const addBucketItem = (item) => {
 
@@ -50,8 +50,10 @@ function BucketList() {
   return (
     <div>
       <h1>What is on your bucket list?</h1>
-      {/* <BucketForm onSubmit={addBucketItem} />
-      <Bucket
+      <h1>Bucket: {bucket}</h1>
+      <BucketForm />
+      {/* <BucketForm onSubmit={addBucketItem} /> 
+      { /* <Bucket
         bucket={bucket}
         completeBucketItem={completeBucketItem}
         removeBucketItem={removeBucketItem}

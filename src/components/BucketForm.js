@@ -30,58 +30,63 @@ function BucketForm(props) {
 
   // First we check to see if "edit" prop exists. If not, we render the normal form
   // If the prop "edit" exists, we know to render the update form instead
-  return !props.edit ? (
-    <div>
-      <form className="bucket-form" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Add to your bucket list"
-          value={input}
-          name="text"
-          className="bucket-input"
-          onChange={handleChange}
-        ></input>
-        <div className="dropdown">
-          <button className={`dropbtn ${eagerness}`}>
-            {eagerness || 'Priority'}
-          </button>
-          <div className="dropdown-content">
-            {/* TODO: Add an onClick event that will set the corresponding eagerness level from the `eagernessLevel` array */}
-            <p onClick={}>Must do</p>
-            <p onClick={}>Want to do</p>
-            <p onClick={}>Take it or leave it</p>
-          </div>
-        </div>
-        <button className="bucket-button">Add bucket list item</button>
-      </form>
+  return (
+  <div>
+    <h1>Bucket Form</h1>
     </div>
-  ) : (
-    <div>
-      <h3>Update entry: {props.edit.value}</h3>
-      <form className="bucket-form" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder={props.edit.value}
-          value={input}
-          name="text"
-          className="bucket-input"
-          onChange={handleChange}
-        ></input>
-        <div className="dropdown">
-          <button className={`dropbtn ${eagerness}`}>
-            {eagerness || 'Priority'}
-          </button>
-          <div className="dropdown-content">
-            {/* TODO: Add an onClick event that will set the corresponding eagerness level from the `eagernessLevel` array */}
-            <p onClick={}>Must do</p>
-            <p onClick={}>Want to do</p>
-            <p onClick={}>Take it or leave it</p>
-          </div>
-        </div>
-        <button className="bucket-button">Update</button>
-      </form>
-    </div>
-  );
+    )
+  // return !props.edit ? (
+  //   <div>
+  //     <form className="bucket-form" onSubmit={handleSubmit}>
+  //       <input
+  //         type="text"
+  //         placeholder="Add to your bucket list"
+  //         value={input}
+  //         name="text"
+  //         className="bucket-input"
+  //         onChange={handleChange}
+  //       ></input>
+  //       <div className="dropdown">
+  //         <button className={`dropbtn ${eagerness}`}>
+  //           {eagerness || 'Priority'}
+  //         </button>
+  //         <div className="dropdown-content">
+  //           {/* TODO: Add an onClick event that will set the corresponding eagerness level from the `eagernessLevel` array */}
+  //           <p onClick={alert("Hello! I am an alert box!!")}>Must do</p>
+  //           <p onClick={alert("Hello! I am an alert box!!")}>Want to do</p>
+  //           <p onClick={alert("Hello! I am an alert box!!")}>Take it or leave it</p>
+  //         </div>
+  //       </div>
+  //       <button className="bucket-button">Add bucket list item</button>
+  //     </form>
+  //   </div>
+  // ) : (
+  //   <div>
+  //     <h3>Update entry: {props.edit.value}</h3>
+  //     <form className="bucket-form" onSubmit={handleSubmit}>
+  //       <input
+  //         type="text"
+  //         placeholder={props.edit.value}
+  //         value={input}
+  //         name="text"
+  //         className="bucket-input"
+  //         onChange={handleChange}
+  //       ></input>
+  //       <div className="dropdown">
+  //         <button className={`dropbtn ${eagerness}`}>
+  //           {eagerness || 'Priority'}
+  //         </button>
+  //         <div className="dropdown-content">
+  //           {/* TODO: Add an onClick event that will set the corresponding eagerness level from the `eagernessLevel` array */}
+  //           <p onClick={alert("Hello! I am an alert box!!")}>Must do</p>
+  //           <p onClick={alert("Hello! I am an alert box!!")}>Want to do</p>
+  //           <p onClick={alert("Hello! I am an alert box!!")}>Take it or leave it</p>
+  //         </div>
+  //       </div>
+  //       <button className="bucket-button">Update</button>
+  //     </form>
+  //   </div>
+  // );
 }
 
 export default BucketForm;
