@@ -23,7 +23,7 @@ function BucketList() {
   }
 
   const displayBucket = () => {
-    const listItems = bucket.map((item) => {return <li>{item.text}</li>});
+    const listItems = bucket.map((item) => {return <li key={item.id}>{item.text}</li>});
     return listItems;
   }
  /*
