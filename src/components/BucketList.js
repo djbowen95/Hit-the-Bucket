@@ -16,17 +16,6 @@ function BucketList() {
     setBucket([...bucket, item]);
   };
 
-  // Renders the items from the bucket, as HTML list items.
-  const displayBucket = () => {
-    const listItems = bucket.map((item) => {
-      return (
-        <li className="bucket-list-item" key={item.id}>
-          {item.text}
-        </li>
-      );
-    });
-    return listItems;
-  };
   /*
   // Function to mark bucket list item as complete
   const completeBucketItem = (id) => {
@@ -65,8 +54,6 @@ function BucketList() {
   return (
     <div>
       <h1>What is on your bucket list?</h1>
-      <h1>Bucket:</h1>
-      <ul>{displayBucket()}</ul>
       <BucketForm onSubmit={addBucketItem} />
       <Bucket bucket={bucket}/>
       {/* <BucketForm onSubmit={addBucketItem} /> 

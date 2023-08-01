@@ -27,14 +27,10 @@ function Bucket(props) {
   }
 
   return props.bucket.map((item, index) => (
-    // TODO: Add a className of `bucket row complete ${item.eagerness}` for completed items, and `bucket-row ${item.eagerness}` for non-completed items
-    // TODO: Add a key attribute set to the value of the index position
-    // Hint: use a ternary operator
-    <div className={getClasses(item)} key={1}>
-
+    <div className={getClasses(item)} key={index}>
       {/* TODO: Add an onClick event that invokes the `completeBucketItem` method passing the item id as a argument */}
-      <div key={2}>
-          {/* TODO: Add the item text here */}
+      <div key={index}>
+          {item.text}
       </div>
       <div className="icons">
          {/* TODO: Add an onClick event update the `edit` object with the `id`, `value`, and `eagerness` properties */}
