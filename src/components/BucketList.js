@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import BucketForm from "./BucketForm";
-// import Bucket from './Bucket';
+import Bucket from './Bucket';
 
 function BucketList() {
   const [bucket, setBucket] = useState([
@@ -12,12 +12,11 @@ function BucketList() {
 
   // Function to add a bucket list item
   const addBucketItem = (item) => {
-    // Currently using a helper function for testing.
-    // TODO: UPDATE with the item parameter.
     console.log(bucket);
     setBucket([...bucket, item]);
   };
 
+  // Renders the items from the bucket, as HTML list items.
   const displayBucket = () => {
     const listItems = bucket.map((item) => {
       return (
@@ -69,6 +68,7 @@ function BucketList() {
       <h1>Bucket:</h1>
       <ul>{displayBucket()}</ul>
       <BucketForm onSubmit={addBucketItem} />
+      <Bucket bucket={bucket}/>
       {/* <BucketForm onSubmit={addBucketItem} /> 
       { /* <Bucket
         bucket={bucket}
