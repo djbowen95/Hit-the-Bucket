@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import BucketForm from './BucketForm';
+import React, { useState } from "react";
+import BucketForm from "./BucketForm";
 
 function Bucket(props) {
   const [edit, setEdit] = useState({
     id: null,
-    value: '',
-    eagerness: '',
+    value: "",
+    eagerness: "",
   });
 
   const submitUpdate = (value) => {
@@ -20,20 +20,18 @@ function Bucket(props) {
 
   const getClasses = (item) => {
     if (item.complete === true) {
-    return `bucket-row complete ${item.eagerness}`
-  } else {
-    return `bucket-row ${item.eagerness}`
-  }
-  }
+      return `bucket-row complete ${item.eagerness}`;
+    } else {
+      return `bucket-row ${item.eagerness}`;
+    }
+  };
 
   return props.bucket.map((item, index) => (
     <div className={getClasses(item)} key={index}>
       {/* TODO: Add an onClick event that invokes the `completeBucketItem` method passing the item id as a argument */}
-      <div key={index}>
-          {item.text}
-      </div>
+      <div key={item.id}>{item.text}</div>
       <div className="icons">
-         {/* TODO: Add an onClick event update the `edit` object with the `id`, `value`, and `eagerness` properties */}
+        {/* TODO: Add an onClick event update the `edit` object with the `id`, `value`, and `eagerness` properties */}
         <p> ✏️</p>
         {/* TODO: Add an onClick event that will invoke the removeBucketItem method passing in the `item.id` */}
         <p> 🗑️</p>
