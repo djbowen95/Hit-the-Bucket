@@ -4,14 +4,15 @@ import BucketForm from './BucketForm';
 
 function BucketList() {
 
-  const [bucket, setBucket] = useState(["Hello", "World"]);
+  const [bucket, setBucket] = useState([{id: 0, text: "Buy a car"}, {id: 1, text: "See a Dolphin"}]);
  
   // Function to add a bucket list item
   const addBucketItem = (item) => {
     console.log(item);
+    console.log(bucket);
     // Currently using a helper function for testing.
     // TODO: UPDATE with the item parameter.
-    setBucket([...bucket, getNewItem()]);
+    setBucket([...bucket, item]);
   };
 
   const getNewItem = () => {
@@ -60,7 +61,7 @@ function BucketList() {
   return (
     <div>
       <h1>What is on your bucket list?</h1>
-      <h1>Bucket: {bucket}</h1>
+      <h1>Bucket: </h1>
       <BucketForm onSubmit={addBucketItem} />
       {/* <BucketForm onSubmit={addBucketItem} /> 
       { /* <Bucket
