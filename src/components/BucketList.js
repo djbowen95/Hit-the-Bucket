@@ -4,10 +4,10 @@ import Bucket from './Bucket';
 
 function BucketList() {
   const [bucket, setBucket] = useState([
-    {id: 0.2187712753129798, text: 'Go Scuba Diving', eagerness: 'low'},
-    {id: 0.6719643913431121, text: 'See a Dolphin', eagerness: 'low'},
+    {id: 0.2187712753129798, text: 'Go Scuba Diving', eagerness: 'high'},
+    {id: 0.6719643913431121, text: 'See a Dolphin', eagerness: 'medium'},
     {id: 0.9234561674495707, text: 'Raise Chickens', eagerness: 'low'},
-    {id: 0.6174456772282497, text: 'Grow Chillis from Seed', eagerness: 'low'}
+    {id: 0.6174456772282497, text: 'Grow Chillis from Seed', eagerness: 'low', complete: true}
   ]);
 
   // Function to add a bucket list item
