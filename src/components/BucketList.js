@@ -8,7 +8,7 @@ function BucketList() {
  
   // Function to add a bucket list item
   const addBucketItem = (item) => {
-    alert("Button has been clicked");
+    setBucket([...bucket, "Its Me"]);
     // TODO: Write logic to add the new bucket item to the bucket state variable
     
   };
