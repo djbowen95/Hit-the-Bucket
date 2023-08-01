@@ -8,8 +8,6 @@ function BucketList() {
  
   // Function to add a bucket list item
   const addBucketItem = (item) => {
-    console.log(item);
-    console.log(bucket);
     // Currently using a helper function for testing.
     // TODO: UPDATE with the item parameter.
     setBucket([...bucket, item]);
@@ -22,6 +20,11 @@ function BucketList() {
     const position = Math.floor(Math.random()*6);
     // Returns the item to be added to the list.
     return items[position];
+  }
+
+  const displayBucket = () => {
+    const listItems = bucket.map((item) => {return <li>{item.text}</li>});
+    return listItems;
   }
  /*
   // Function to mark bucket list item as complete
@@ -61,7 +64,8 @@ function BucketList() {
   return (
     <div>
       <h1>What is on your bucket list?</h1>
-      <h1>Bucket: </h1>
+      <h1>Bucket:</h1>
+      <ol>{displayBucket()}</ol>
       <BucketForm onSubmit={addBucketItem} />
       {/* <BucketForm onSubmit={addBucketItem} /> 
       { /* <Bucket
