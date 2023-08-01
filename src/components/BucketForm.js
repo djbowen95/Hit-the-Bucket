@@ -33,6 +33,7 @@ function BucketForm(props) {
   return (
   <div>
     <h1>Bucket Form</h1>
+    <button onClick={handleSubmit}>Hello</button>
     </div>
     )
   // return !props.edit ? (

@@ -8,9 +8,10 @@ function BucketList() {
  
   // Function to add a bucket list item
   const addBucketItem = (item) => {
+    console.log(item);
+    // Currently using a helper function for testing.
+    // TODO: UPDATE with the item parameter.
     setBucket([...bucket, getNewItem()]);
-    // TODO: Write logic to add the new bucket item to the bucket state variable
-    
   };
 
   const getNewItem = () => {
@@ -60,8 +61,7 @@ function BucketList() {
     <div>
       <h1>What is on your bucket list?</h1>
       <h1>Bucket: {bucket}</h1>
-      <button onClick={addBucketItem}>Hello</button>
-      <BucketForm />
+      <BucketForm onSubmit={addBucketItem} />
       {/* <BucketForm onSubmit={addBucketItem} /> 
       { /* <Bucket
         bucket={bucket}
