@@ -8,10 +8,19 @@ function BucketList() {
  
   // Function to add a bucket list item
   const addBucketItem = (item) => {
-    setBucket([...bucket, "Its Me"]);
+    setBucket([...bucket, getNewItem()]);
     // TODO: Write logic to add the new bucket item to the bucket state variable
     
   };
+
+  const getNewItem = () => {
+    // Array of items that could be on a bucket list.
+    const items = ["Buy Things", "Do Things", "See a Dolphin", "Eat a Cake", "Go Scuba Diving", "Pay Off Mortgage"];
+    // Random choice from the 
+    const position = Math.floor(Math.random()*6);
+    // Returns the item to be added to the list.
+    return items[position];
+  }
  /*
   // Function to mark bucket list item as complete
   const completeBucketItem = (id) => {
