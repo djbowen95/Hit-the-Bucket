@@ -1,32 +1,34 @@
-import React, { useState } from 'react';
-import BucketForm from './BucketForm';
+import React, { useState } from "react";
+import BucketForm from "./BucketForm";
 // import Bucket from './Bucket';
 
 function BucketList() {
+  const [bucket, setBucket] = useState([
+    {id: 0.2187712753129798, text: 'Go Scuba Diving', eagerness: 'low'},
+    {id: 0.6719643913431121, text: 'See a Dolphin', eagerness: 'low'},
+    {id: 0.9234561674495707, text: 'Raise Chickens', eagerness: 'low'},
+    {id: 0.6174456772282497, text: 'Grow Chillis from Seed', eagerness: 'low'}
+  ]);
 
-  const [bucket, setBucket] = useState([{id: 0, text: "Buy a car"}, {id: 1, text: "See a Dolphin"}]);
- 
   // Function to add a bucket list item
   const addBucketItem = (item) => {
     // Currently using a helper function for testing.
     // TODO: UPDATE with the item parameter.
+    console.log(bucket);
     setBucket([...bucket, item]);
   };
 
-  const getNewItem = () => {
-    // Array of items that could be on a bucket list.
-    const items = ["Buy Things", "Do Things", "See a Dolphin", "Eat a Cake", "Go Scuba Diving", "Pay Off Mortgage"];
-    // Random choice from the 
-    const position = Math.floor(Math.random()*6);
-    // Returns the item to be added to the list.
-    return items[position];
-  }
-
   const displayBucket = () => {
-    const listItems = bucket.map((item) => {return <li key={item.id}>{item.text}</li>});
+    const listItems = bucket.map((item) => {
+      return (
+        <li className="bucket-list-item" key={item.id}>
+          {item.text}
+        </li>
+      );
+    });
     return listItems;
-  }
- /*
+  };
+  /*
   // Function to mark bucket list item as complete
   const completeBucketItem = (id) => {
     // If the ID passed to this function matches the ID of the item that was clicked, mark it as complete
@@ -65,7 +67,7 @@ function BucketList() {
     <div>
       <h1>What is on your bucket list?</h1>
       <h1>Bucket:</h1>
-      <ol>{displayBucket()}</ol>
+      <ul>{displayBucket()}</ul>
       <BucketForm onSubmit={addBucketItem} />
       {/* <BucketForm onSubmit={addBucketItem} /> 
       { /* <Bucket
