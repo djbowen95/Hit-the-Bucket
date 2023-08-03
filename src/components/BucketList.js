@@ -4,10 +4,10 @@ import Bucket from './Bucket';
 
 function BucketList() {
   const [bucket, setBucket] = useState([
-    {id: 0.2187712753129798, text: 'Go Scuba Diving', eagerness: 'high'},
-    {id: 0.6719643913431121, text: 'See a Dolphin', eagerness: 'medium'},
-    {id: 0.9234561674495707, text: 'Raise Chickens', eagerness: 'low'},
-    {id: 0.6174456772282497, text: 'Grow Chillis from Seed', eagerness: 'low', complete: true}
+    {id: 0.2187712753129798, text: 'Go Scuba Diving', eagerness: 'high', complete: false},
+    {id: 0.6719643913431121, text: 'See a Dolphin', eagerness: 'medium', complete: false},
+    {id: 0.9234561674495707, text: 'Raise Chickens', eagerness: 'low', complete: false},
+    {id: 0.6174456772282497, text: 'Grow Chillis from Seed', eagerness: 'low', complete: false}
   ]);
 
   // Function to add a bucket list item
@@ -19,12 +19,14 @@ function BucketList() {
   // Function to mark bucket list item as complete
   const completeBucketItem = (id) => {
     let updatedBucket = bucket.map((item) => {
-      if (id === item.id) {
-        console.log("This is the item clicked");
-        console.log(id);
-        console.log(item);
-      };
+      if (item.id === id) {
+        let newItem = item;
+        newItem.complete = !newItem.complete;
+        return newItem;
+      }
+      return item;
     })
+    console.log(updatedBucket);
     // If the ID passed to this function matches the ID of the item that was clicked, mark it as complete
     // let updatedBucket = bucket.map((item) => {
     //   if (id === item.id) {
