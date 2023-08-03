@@ -1,22 +1,41 @@
 import React, { useState } from "react";
 import BucketForm from "./BucketForm";
-import Bucket from './Bucket';
+import Bucket from "./Bucket";
 
 function BucketList() {
   const [bucket, setBucket] = useState([
-    {id: 0.2187712753129798, text: 'Go Scuba Diving', eagerness: 'high', complete: false},
-    {id: 0.6719643913431121, text: 'See a Dolphin', eagerness: 'medium', complete: false},
-    {id: 0.9234561674495707, text: 'Raise Chickens', eagerness: 'low', complete: false},
-    {id: 0.6174456772282497, text: 'Grow Chillis from Seed', eagerness: 'low', complete: false}
+    {
+      id: 0.2187712753129798,
+      text: "Go Scuba Diving",
+      eagerness: "high",
+      complete: false,
+    },
+    {
+      id: 0.6719643913431121,
+      text: "See a Dolphin",
+      eagerness: "medium",
+      complete: false,
+    },
+    {
+      id: 0.9234561674495707,
+      text: "Raise Chickens",
+      eagerness: "low",
+      complete: false,
+    },
+    {
+      id: 0.6174456772282497,
+      text: "Grow Chillis from Seed",
+      eagerness: "low",
+      complete: false,
+    },
   ]);
 
   // Function to add a bucket list item
   const addBucketItem = (item) => {
-    console.log(bucket);
     setBucket([...bucket, item]);
   };
 
-  // Function to mark bucket list item as complete
+  // Function to mark bucket list item as complete, or incomplete
   const completeBucketItem = (id) => {
     let updatedBucket = bucket.map((item) => {
       if (item.id === id) {
@@ -25,33 +44,17 @@ function BucketList() {
         return newItem;
       }
       return item;
-    })
+    });
 
     setBucket(updatedBucket);
-    // If the ID passed to this function matches the ID of the item that was clicked, mark it as complete
-    // let updatedBucket = bucket.map((item) => {
-    //   if (id === item.id) {
-    //     item.complete = true; // Or should I reverse it with ! ?
-    //     return item;
-    //   } else {
-    //     return item;
-    //   }
-      
-      // TODO: Write logic that marks an item as complete or incomplete when invoked
-
-    // });
-
-    // setBucket(updatedBucket);
   };
-/*
+
   // Function to remove bucket list item and update state
   const removeBucketItem = (id) => {
-    // TODO: Write logic that will return an array of items that don't contain the ID passed to this function
-
-
-    // TODO: Update the bucket state variable
+    let updatedBucket = bucket.filter((item) => item.id != id);
+    setBucket(updatedBucket);
   };
-
+  /*
   // Function to edit the bucket list item
   const editBucketItem = (itemId, newValue) => {
     // Make sure that the value isn't empty
@@ -70,7 +73,11 @@ function BucketList() {
     <div>
       <h1>What is on your bucket list?</h1>
       <BucketForm onSubmit={addBucketItem} />
-      <Bucket bucket={bucket} completeBucketItem={completeBucketItem}/>
+      <Bucket 
+        bucket={bucket} 
+        completeBucketItem={completeBucketItem}
+        removeBucketItem={removeBucketItem} 
+      />
       {/* <BucketForm onSubmit={addBucketItem} /> 
       { /* <Bucket
         bucket={bucket}
