@@ -18,9 +18,14 @@ function BucketList() {
 
   // Function to mark bucket list item as complete
   const completeBucketItem = (id) => {
+    let updatedBucket = bucket.map((item) => {
+      if (id === item.id) {
+        console.log("This is the item clicked");
+        console.log(id);
+        console.log(item);
+      };
+    })
     // If the ID passed to this function matches the ID of the item that was clicked, mark it as complete
-    console.log(id);
-    return;
     // let updatedBucket = bucket.map((item) => {
     //   if (id === item.id) {
     //     item.complete = true; // Or should I reverse it with ! ?
