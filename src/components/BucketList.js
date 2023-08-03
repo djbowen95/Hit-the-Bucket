@@ -19,8 +19,8 @@ function BucketList() {
   // Function to mark bucket list item as complete
   const completeBucketItem = (id) => {
     // If the ID passed to this function matches the ID of the item that was clicked, mark it as complete
-    console.log("Button clicked.");
     console.log(id);
+    return;
     // let updatedBucket = bucket.map((item) => {
     //   if (id === item.id) {
     //     item.complete = true; // Or should I reverse it with ! ?
@@ -62,8 +62,7 @@ function BucketList() {
     <div>
       <h1>What is on your bucket list?</h1>
       <BucketForm onSubmit={addBucketItem} />
-      <Bucket bucket={bucket}/>
-      <button onCick={completeBucketItem("Hello")}>Hello</button>
+      <Bucket bucket={bucket} completeBucketItem={completeBucketItem}/>
       {/* <BucketForm onSubmit={addBucketItem} /> 
       { /* <Bucket
         bucket={bucket}
