@@ -54,7 +54,7 @@ function BucketList() {
     let updatedBucket = bucket.filter((item) => item.id != id);
     setBucket(updatedBucket);
   };
-  /*
+
   // Function to edit the bucket list item
   const editBucketItem = (itemId, newValue) => {
     // Make sure that the value isn't empty
@@ -68,7 +68,7 @@ function BucketList() {
       prev.map((item) => (item.id === itemId ? newValue : item))
     );
   };
-*/
+
   return (
     <div>
       <h1>What is on your bucket list?</h1>
@@ -76,15 +76,9 @@ function BucketList() {
       <Bucket 
         bucket={bucket} 
         completeBucketItem={completeBucketItem}
-        removeBucketItem={removeBucketItem} 
-      />
-      {/* <BucketForm onSubmit={addBucketItem} /> 
-      { /* <Bucket
-        bucket={bucket}
-        completeBucketItem={completeBucketItem}
         removeBucketItem={removeBucketItem}
-        editBucketItem={editBucketItem}
-  ></Bucket> */}
+        editBucketItem={editBucketItem} 
+      />
     </div>
   );
 }
