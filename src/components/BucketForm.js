@@ -46,12 +46,12 @@ function BucketForm(props) {
           <button className={`dropbtn ${eagerness}`}>
             {eagerness || 'Priority'}
           </button>
-          {/* <div className="dropdown-content"> */}
+          <div className="dropdown-content">
             {/* TODO: Add an onClick event that will set the corresponding eagerness level from the `eagernessLevel` array */}
-            {/* <p onClick={alert("Hello! I am an alert box!!")}>Must do</p>
-            <p onClick={alert("Hello! I am an alert box!!")}>Want to do</p>
-            <p onClick={alert("Hello! I am an alert box!!")}>Take it or leave it</p>
-          </div> */}
+           <p onClick={() => alert("Eager: High")}>Must do</p>
+            <p onClick={() => alert("Eager: Medium")}>Want to do</p>
+             <p onClick={() => alert("Eager: Low")}>Take it or leave it</p>
+          </div>
         </div>
         <button className="bucket-button">Add bucket list item</button>
       </form>
@@ -74,9 +74,9 @@ function BucketForm(props) {
           </button>
           {/* <div className="dropdown-content"> */}
             {/* TODO: Add an onClick event that will set the corresponding eagerness level from the `eagernessLevel` array */}
-            {/* <p onClick={alert("Hello! I am an alert box!!")}>Must do</p>
-            <p onClick={alert("Hello! I am an alert box!!")}>Want to do</p>
-            <p onClick={alert("Hello! I am an alert box!!")}>Take it or leave it</p>
+            {/* <p onClick={alert("Hello! I am an alert box")}>Must do</p>
+            <p onClick={alert("Hello! I am an alert box")}>Want to do</p>
+            <p onClick={alert("Hello! I am an alert box")}>Take it or leave it</p>
           </div> */}
         </div>
         <button className="bucket-button">Update</button>
