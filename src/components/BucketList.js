@@ -16,19 +16,26 @@ function BucketList() {
     setBucket([...bucket, item]);
   };
 
-  /*
   // Function to mark bucket list item as complete
   const completeBucketItem = (id) => {
     // If the ID passed to this function matches the ID of the item that was clicked, mark it as complete
-    let updatedBucket = bucket.map((item) => {
+    console.log("Button clicked.");
+    console.log(id);
+    // let updatedBucket = bucket.map((item) => {
+    //   if (id === item.id) {
+    //     item.complete = true; // Or should I reverse it with ! ?
+    //     return item;
+    //   } else {
+    //     return item;
+    //   }
       
       // TODO: Write logic that marks an item as complete or incomplete when invoked
 
-    });
+    // });
 
-    setBucket(updatedBucket);
+    // setBucket(updatedBucket);
   };
-
+/*
   // Function to remove bucket list item and update state
   const removeBucketItem = (id) => {
     // TODO: Write logic that will return an array of items that don't contain the ID passed to this function
@@ -56,6 +63,7 @@ function BucketList() {
       <h1>What is on your bucket list?</h1>
       <BucketForm onSubmit={addBucketItem} />
       <Bucket bucket={bucket}/>
+      <button onCick={completeBucketItem("Hello")}>Hello</button>
       {/* <BucketForm onSubmit={addBucketItem} /> 
       { /* <Bucket
         bucket={bucket}

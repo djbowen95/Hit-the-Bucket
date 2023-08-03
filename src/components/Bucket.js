@@ -19,11 +19,7 @@ function Bucket(props) {
   }
 
   const getClasses = (item) => {
-    if (item.complete === true) {
-      return `bucket-row complete ${item.eagerness}`;
-    } else {
-      return `bucket-row ${item.eagerness}`;
-    }
+    return (item.complete ? `bucket-row complete ${item.eagerness}` : `bucket-row ${item.eagerness}`);
   };
 
   return props.bucket.map((item, index) => (
