@@ -25,7 +25,7 @@ function Bucket(props) {
   return props.bucket.map((item, index) => (
     <div className={getClasses(item)} key={index}>
       {/* TODO: Add an onClick event that invokes the `completeBucketItem` method passing the item id as a argument */}
-      <div key={item.id} onClick={() => {props.completeBucketItem(item.id)}}>{item.text}</div>
+      <div className="bucket-item" key={item.id} onClick={() => {props.completeBucketItem(item.id)}}>{item.text}</div>
       <div className="icons">
         {/* TODO: Add an onClick event update the `edit` object with the `id`, `value`, and `eagerness` properties */}
         <p> ✏️</p>

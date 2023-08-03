@@ -26,7 +26,8 @@ function BucketList() {
       }
       return item;
     })
-    console.log(updatedBucket);
+
+    setBucket(updatedBucket);
     // If the ID passed to this function matches the ID of the item that was clicked, mark it as complete
     // let updatedBucket = bucket.map((item) => {
     //   if (id === item.id) {
