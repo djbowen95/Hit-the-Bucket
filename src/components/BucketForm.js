@@ -48,9 +48,9 @@ function BucketForm(props) {
           </button>
           <div className="dropdown-content">
             {/* TODO: Add an onClick event that will set the corresponding eagerness level from the `eagernessLevel` array */}
-           <p onClick={() => alert("Eager: High")}>Must do</p>
-            <p onClick={() => alert("Eager: Medium")}>Want to do</p>
-             <p onClick={() => alert("Eager: Low")}>Take it or leave it</p>
+           <p onClick={() => setEagerness(eagernessLevel[0])}>Must do</p>
+            <p onClick={() => setEagerness(eagernessLevel[1])}>Want to do</p>
+             <p onClick={() => setEagerness(eagernessLevel[2])}>Take it or leave it</p>
           </div>
         </div>
         <button className="bucket-button">Add bucket list item</button>
