@@ -12,10 +12,15 @@ function Bucket(props) {
     // TODO: Write logic to update the `edit` value in state after a user updates an entry in the list
     let updatedBucket = props.bucket.map((item) => {
       if (item.id === edit.id) {
-        console.log(item.text);
+        let updatedItem = item;
+        if(value.text) {
+          updatedItem.text = value.text;
+        };
+        return updatedItem;
       }
+      return item;
     })
-    // TODO: Set the key:value pairs in the `edit` object back to empty strings
+    props.setBucket(updatedBucket);
     setEdit({id: null, value: "", eagerness: ""});
   };
 

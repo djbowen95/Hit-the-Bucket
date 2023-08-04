@@ -75,6 +75,7 @@ function BucketList() {
       <BucketForm onSubmit={addBucketItem} />
       <Bucket 
         bucket={bucket} 
+        setBucket={setBucket}
         completeBucketItem={completeBucketItem}
         removeBucketItem={removeBucketItem}
         editBucketItem={editBucketItem} 
