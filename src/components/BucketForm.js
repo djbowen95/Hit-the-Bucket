@@ -69,7 +69,7 @@ function BucketForm(props) {
         ></input>
         <div className="dropdown">
           <button className={`dropbtn ${eagerness}`}>
-            {eagerness || 'Priority'}
+            {props.edit.eagerness || 'Priority'}
           </button>
           <div className="dropdown-content">
            <p onClick={() => setEagerness(eagernessLevel[0])}>Must do</p>
