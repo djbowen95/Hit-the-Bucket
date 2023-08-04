@@ -15,7 +15,11 @@ function Bucket(props) {
         let updatedItem = item;
         if(value.text) {
           updatedItem.text = value.text;
+          console.log(value.eagerness);
         };
+        if (value.eagerness) {
+          updatedItem.eagerness = value.eagerness;
+        }
         return updatedItem;
       }
       return item;
