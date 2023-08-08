@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import BucketForm from "./BucketForm";
 import Bucket from "./Bucket";
 
-function BucketList() {
-  const [bucket, setBucket] = useState([
+const returnDefaultBucket = () => {
+  return [
     {
       id: 0.2187712753129798,
       text: "Go Scuba Diving",
@@ -28,11 +28,14 @@ function BucketList() {
       eagerness: "low",
       complete: false,
     },
-  ]);
+  ]
+}
+
+function BucketList() {
+  const [bucket, setBucket] = useState(returnDefaultBucket());
 
   useEffect(() => {
     localStorage.setItem("bucket", JSON.stringify(bucket));
-    console.log(localStorage.getItem("bucket"));
   })
 
   // Function to add a bucket list item
