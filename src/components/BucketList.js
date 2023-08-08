@@ -2,6 +2,12 @@ import React, { useState, useEffect } from "react";
 import BucketForm from "./BucketForm";
 import Bucket from "./Bucket";
 
+const getBucket = () => {
+  if (localStorage.bucket) {
+    return JSON.parse(localStorage.bucket);
+  } else return returnDefaultBucket();
+}
+
 const returnDefaultBucket = () => {
   return [
     {
@@ -32,7 +38,7 @@ const returnDefaultBucket = () => {
 }
 
 function BucketList() {
-  const [bucket, setBucket] = useState(returnDefaultBucket());
+  const [bucket, setBucket] = useState(getBucket());
 
   useEffect(() => {
     localStorage.setItem("bucket", JSON.stringify(bucket));
