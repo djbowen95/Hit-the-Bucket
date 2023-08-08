@@ -31,8 +31,8 @@ function BucketList() {
   ]);
 
   useEffect(() => {
-    localStorage.setItem("myBucket", JSON.stringify(bucket));
-    console.log(localStorage.getItem("myBucket"));
+    localStorage.setItem("bucket", JSON.stringify(bucket));
+    console.log(localStorage.getItem("bucket"));
   })
 
   // Function to add a bucket list item
