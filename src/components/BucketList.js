@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import BucketForm from "./BucketForm";
 import Bucket from "./Bucket";
 
@@ -29,6 +29,10 @@ function BucketList() {
       complete: false,
     },
   ]);
+
+  useEffect(() => {
+    console.log("State updated.")
+  })
 
   // Function to add a bucket list item
   const addBucketItem = (item) => {
