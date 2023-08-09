@@ -1,5 +1,24 @@
 <h1 align="center"> 🏖️ Hit the Bucket 🏖️ </h1>
 
+<div align="center">
+  <img src="https://img.shields.io/badge/Deployed%20here!%20-008CFF?style=flat-square" alt="deployed link badge">
+  <img src="https://img.shields.io/github/v/release/djbowen95/Hit-the-Bucket?style=flat-square&color=FDA325" alt="current release tag badge">
+  <img src="https://img.shields.io/github/release-date/djbowen95/Hit-the-Bucket?style=flat-square&color=FDA325" alt="current release date badge">
+  <br/>
+  <img src="https://img.shields.io/github/issues/djbowen95/Hit-the-Bucket?style=flat-square&color=E5E5E5" alt="badge for total number of issues on this repo">
+  <img src="https://img.shields.io/github/issues/djbowen95/Hit-the-Bucket/new%20feature?style=flat-square&label=enhancements&color=b8dcff" alt="issues tagged with new feature">
+  <img src="https://img.shields.io/github/issues/djbowen95/Hit-the-Bucket/bug?style=flat-square&label=bugs&color=fedfb1" alt="issues tagged as bugs">
+  <img src="https://img.shields.io/github/issues-closed/djbowen95/Hit-the-Bucket?style=flat-square&color=8E8E8E" alt="closed issues">
+  <br/>
+  <img src="https://img.shields.io/github/commit-activity/t/djbowen95/Hit-the-Bucket?style=flat-square&color=1348ba" alt="badge for number of commits">
+  <img src="https://img.shields.io/github/repo-size/djbowen95/Hit-the-Bucket?style=flat-square&color=E5E5E5" alt="repo size">
+  <img src="https://img.shields.io/github/license/djbowen95/Hit-the-Bucket?style=flat-square&color=00df54" alt="license badge">
+  <br/>
+</div>
+
+
+</div>
+
 Bucket list application built with React. Multi-component application that stores user's bucket list in state; passes bucket list object and state modifying functions through props to different components. Built from starter code. 
 
 Work in progress. You can view a deployed version of the current application here: https://djbowen95.github.io/Hit-the-Bucket/
