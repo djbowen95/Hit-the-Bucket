@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Hit-the-Bucket/static/css/main.a2fd347b.css",
+    "main.js": "/Hit-the-Bucket/static/js/main.740487fa.js",
+    "index.html": "/Hit-the-Bucket/index.html",
+    "main.a2fd347b.css.map": "/Hit-the-Bucket/static/css/main.a2fd347b.css.map",
+    "main.740487fa.js.map": "/Hit-the-Bucket/static/js/main.740487fa.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a2fd347b.css",
+    "static/js/main.740487fa.js"
+  ]
+}
