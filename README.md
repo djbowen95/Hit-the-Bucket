@@ -2,6 +2,8 @@
 
 Bucket list application built with React. Multi-component application that stores user's bucket list in state; passes bucket list object and state modifying functions through props to different components. Built from starter code. 
 
+Work in progress. You can view a deployed version of the current application here: https://djbowen95.github.io/Hit-the-Bucket/
+
 Work in progress. I have been documenting this project as I've been building it. Please look at issues #1, #5 and #6 to see my progress so far (or release 0.1.0).
 
 ## Contents
