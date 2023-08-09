@@ -1,5 +1,4 @@
-<h1 align="center"> 🏖️ Hit the Bucket 🏖️ </h1>
-
+<h1 align="center"> 🏖️ Hit the Bucket! 🏖️ </h1>
 <div align="center">
   <img src="https://img.shields.io/badge/Deployed%20here!%20-008CFF?style=flat-square" alt="deployed link badge">
   <img src="https://img.shields.io/github/v/release/djbowen95/Hit-the-Bucket?style=flat-square&color=FDA325" alt="current release tag badge">
@@ -13,6 +12,7 @@
   <img src="https://img.shields.io/github/commit-activity/t/djbowen95/Hit-the-Bucket?style=flat-square&color=1348ba" alt="badge for number of commits">
   <img src="https://img.shields.io/github/repo-size/djbowen95/Hit-the-Bucket?style=flat-square&color=E5E5E5" alt="repo size">
   <img src="https://img.shields.io/github/license/djbowen95/Hit-the-Bucket?style=flat-square&color=00df54" alt="license badge">
+  <a href="#contact"><img src="https://img.shields.io/badge/Contact!%20-1348ba?style=flat-square" alt="link to contact section"></a>
   <br/>
 </div>
 
