@@ -10,10 +10,7 @@ function BucketForm(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Check there is a text value; display an alert if not.
-    if (!input) {
-      alert("No input!");
-      return;
-    }
+    handleInput();
 
     props.onSubmit({
       id: Math.random(Math.floor() * 1000),
@@ -29,6 +26,20 @@ function BucketForm(props) {
   const handleChange = (e) => {
     setInput(e.target.value);
   };
+
+  // Checks there is a text input, then checks if there is a a props.edit.value;
+  // If neither exists, returns.
+  const handleInput = () => {
+    if (!input) {
+      if (props.edit.value) {
+        setInput(props.edit.value);
+        console.log("Took the value from props.")
+      } else {
+        alert("No input!");
+      return;
+      }
+    }
+  }
 
   // First we check to see if "edit" prop exists. If not, we render the normal form
   // If the prop "edit" exists, we know to render the update form instead
