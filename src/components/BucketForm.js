@@ -18,6 +18,7 @@ function BucketForm(props) {
       id: Math.random(Math.floor() * 1000),
       text: input,
       eagerness: eagerness,
+      complete: false
     });
 
     setInput('');
