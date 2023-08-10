@@ -9,15 +9,16 @@ function BucketForm(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    if (!eagerness) {
-      eagerness = 'low';
+    // Check there is a text value; display an alert if not.
+    if (!input) {
+      alert("No input!");
+      return;
     }
 
     props.onSubmit({
       id: Math.random(Math.floor() * 1000),
       text: input,
-      eagerness: eagerness,
+      eagerness: eagerness || "low",
       complete: false
     });
 
@@ -44,7 +45,7 @@ function BucketForm(props) {
           onChange={handleChange}
         ></input>
         <div className="dropdown">
-          <button className={`dropbtn ${eagerness}`}>
+          <button className={`dropbtn ${eagerness}`} type="button">
             {eagerness || 'Priority'}
           </button>
           <div className="dropdown-content">
@@ -53,7 +54,7 @@ function BucketForm(props) {
              <p onClick={() => setEagerness(eagernessLevel[2])}>Take it or leave it</p>
           </div>
         </div>
-        <button className="bucket-button">Add bucket list item</button>
+        <button className="bucket-button" type="submit">Add bucket list item</button>
       </form>
     </div>
   ) : (
