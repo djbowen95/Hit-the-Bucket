@@ -61,9 +61,6 @@ I will edit in with short demonstration GIFs of each of these features at a late
 I will edit in with a code snippet and explanation of where specifically in the project I used each of these things.
 
 ## Version History
-### 1.0.0 Complete project (upcoming)
-### 0.4.1 Bug fixes (upcoming)
-### 0.4.0 README Update (upcoming)
 ### 0.3.0 Make user data persist using localStorage; deploy
 ### 0.2.0 Mark complete; remove; edit/update bucket items
 ### 0.1.0 Add bucket item; render bucket items
